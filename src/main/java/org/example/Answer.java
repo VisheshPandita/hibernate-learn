@@ -1,9 +1,6 @@
 package org.example;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Answer {
@@ -12,15 +9,15 @@ public class Answer {
     @Column(name = "a_id")
     private int answerId;
     private String answer;
-    @OneToOne(mappedBy = "answer")
-    private Question q;
+    @ManyToOne
+    private Question question;
 
     public Question getQ() {
-        return q;
+        return question;
     }
 
     public void setQ(Question q) {
-        this.q = q;
+        this.question = q;
     }
 
     public int getAnswerId() {

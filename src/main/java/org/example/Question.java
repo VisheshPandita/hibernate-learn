@@ -2,6 +2,8 @@ package org.example;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Question {
 
@@ -9,9 +11,17 @@ public class Question {
     @Column(name = "q_id")
     private int questionId;
     private String question;
-    @OneToOne
-    @JoinColumn(name = "a_id")
-    private Answer answer;
+
+    @OneToMany(mappedBy = "question")
+    private List<Answer> answers;
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
 
     public int getQuestionId() {
         return questionId;
@@ -29,18 +39,10 @@ public class Question {
         this.question = question;
     }
 
-    public Answer getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
-    }
-
-    public Question(int questionId, String question, Answer answer) {
+    public Question(int questionId, String question, List<Answer> answers) {
         this.questionId = questionId;
         this.question = question;
-        this.answer = answer;
+        this.answers = answers;
     }
 
     public Question() {

@@ -5,6 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapDemo {
     public static void main(String[] args) {
         Configuration cfg = new Configuration();
@@ -20,7 +23,10 @@ public class MapDemo {
         Answer answer = new Answer(343, "Java is a programming language");
         answer.setQ(q1);
 
-        q1.setAnswer(answer);
+        List<Answer> list = new ArrayList<>();
+        list.add(answer);
+
+        q1.setAnswers(list);
 
         // session
         Session s = factory.openSession();
@@ -35,7 +41,9 @@ public class MapDemo {
         // fetching
         Question newQ = (Question) s.get(Question.class, 1212);
         System.out.println(newQ.getQuestion());
-        System.out.println(newQ.getAnswer().getAnswer());
+        for(Answer a: newQ.getAnswers()){
+            System.out.println(a.getAnswer());
+        }
 
         factory.close();
     }
