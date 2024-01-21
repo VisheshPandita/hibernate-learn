@@ -12,7 +12,7 @@ public class Question {
     private int questionId;
     private String question;
 
-    @OneToMany(mappedBy = "question")
+    @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
     private List<Answer> answers;
 
     public List<Answer> getAnswers() {

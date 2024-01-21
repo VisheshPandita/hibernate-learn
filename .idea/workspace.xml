@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac776251-0349-46d8-a302-3115e0537fce" name="Changes" comment="one to many mapping">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Emp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MapDemoTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Project.java" afterDir="false" />
+    <list default="true" id="ac776251-0349-46d8-a302-3115e0537fce" name="Changes" comment="many to many mapping">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +60,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MapDemoTwo">
+  <component name="RunManager" selected="Application.MapDemo">
     <configuration name="EmDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.EmDemo" />
       <module name="hibernate-learn" />
@@ -130,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MapDemoTwo" />
         <item itemvalue="Application.MapDemo" />
+        <item itemvalue="Application.MapDemoTwo" />
         <item itemvalue="Application.EmDemo" />
         <item itemvalue="Application.FetchDemo" />
         <item itemvalue="Application.Main" />
@@ -187,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705778751953</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="many to many mapping">
+      <option name="closed" value="true" />
+      <created>1705781240240</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705781240240</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +201,7 @@
     <MESSAGE value="hibernate fetch" />
     <MESSAGE value="one to one mapping" />
     <MESSAGE value="one to many mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="one to many mapping" />
+    <MESSAGE value="many to many mapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="many to many mapping" />
   </component>
 </project>
